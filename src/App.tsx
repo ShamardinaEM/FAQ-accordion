@@ -41,8 +41,10 @@ function App() {
                                     </span>
                                 </button>
                             </div>
-                            <div className="text-area">
-                                <p>{isOpen.includes(index) ? item.desc : ""}</p>
+                            <div
+                                className={`text-area ${isOpen.includes(index) ? "open" : ""}`}
+                            >
+                                <p>{item.desc}</p>
                             </div>
                         </div>
                         <div className="line"></div>

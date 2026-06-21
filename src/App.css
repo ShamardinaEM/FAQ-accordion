@@ -9,7 +9,7 @@
 }
 .wrapper {
     margin: auto;
-    width: 38em;
+    width: min(100% - 1em, 65ch);
     background-color: #fff;
     padding: 2em;
     border-radius: 15px;
@@ -45,8 +45,21 @@
 .line:last-child {
     height: 0px;
 }
-@media (max-width: 500px) {
-    .wrapper {
-        width: 90%;
-    }
+p {
+    color: hsl(292, 16%, 49%);
+}
+.open {
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.3s ease;
+}
+.text-area {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-top: 0;
+}
+.text-area.open {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 12px;
 }
